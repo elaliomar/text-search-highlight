@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# React Highlight Search (TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is a React-based project that implements a search functionality where the search term highlights matching text within a paragraph, title, and date. Additionally, the number of matches is counted and displayed dynamically.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Dynamic Search**: As you type in the search input, any matching text within the content is highlighted in yellow.
+- **Match Counting**: The total number of highlighted matches is displayed.
+- **Clear Input**: The search input can be cleared by clicking the clear button (`X` icon).
+- **Content Highlighting**: The project highlights matches in the title, date, and the main content of the paragraph.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  
+## How to Install the Project
+To get started with the News24 web application, follow these simple steps:
 
-- Configure the top-level `parserOptions` property like this:
+- Clone the project repository from the existing source.
+- Once you've cloned the project, navigate to the project directory in your terminal and install all the necessary dependencies. You can do this using npm or yarn, depending on your preference.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To start Vite, run the following command from the _root_ of your React js project:
+
+```bash
+# using npm
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+If everything is set up _correctly_, you should see your new app running in your browser
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## License
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.t
